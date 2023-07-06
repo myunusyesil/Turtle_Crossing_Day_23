@@ -15,21 +15,17 @@ screen.listen()
 screen.onkeypress(fun=player.move, key='Up')
 
 cars = []
-first_car = CarManager()
-cars.append(first_car)
-
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
 
     # Generate random cars along y-axis and move it
-    # Reduce the car generation with random and for function
-    num = random.randint(0, 10)
-    if num > 7:
+    # Reduce the car generation on every 6 turn
+    random_chance = random.randint(1, 6)
+    if random_chance == 1:
         new_car = CarManager()
-        if cars[-1].distance(new_car) > 50:
-            cars.append(new_car)
+        cars.append(new_car)
     for car in cars:
         car.move(score.level)
 
@@ -45,7 +41,6 @@ while game_is_on:
             print("Crash happened!")
             game_is_on = False
             score.game_over()
-
 
 
 

@@ -14,10 +14,10 @@ class CarManager(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=2)
         self.penup()
         self.color(random.choice(COLORS))
-        pos_y = (random.randint(-28, 28))*20
+        pos_y = random.randint(-250, 250)
         self.goto(320, pos_y)
 
     def move(self, level):
         # print(level, STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT)
         self.setheading(180)
-        self.forward(STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT )
+        self.forward(STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT)
