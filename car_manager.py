@@ -18,5 +18,6 @@ class CarManager(Turtle):
         self.goto(320, pos_y)
 
     def move(self, level):
+        # print(level, STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT)
         self.setheading(180)
-        self.forward(STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT)
+        self.forward(STARTING_MOVE_DISTANCE + (level-1) * MOVE_INCREMENT )

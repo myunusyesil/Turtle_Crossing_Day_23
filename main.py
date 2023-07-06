@@ -26,9 +26,9 @@ while game_is_on:
     # Generate random cars along y-axis and move it
     # Reduce the car generation with random and for function
     num = random.randint(0, 10)
-    if num > 8:
+    if num > 7:
         new_car = CarManager()
-        if cars[-1].distance(new_car) > 60:
+        if cars[-1].distance(new_car) > 50:
             cars.append(new_car)
     for car in cars:
         car.move(score.level)
